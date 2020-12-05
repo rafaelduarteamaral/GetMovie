@@ -12,9 +12,10 @@ class GetMoviService implements Service<Request, Response> {
 
         try {
             const movie = await JSON.parse(await getMovie(req.params.id));
-
+            console.log(process.env.MONGO_USER);
+            return res.status(200).json({});
+ 
             const movieModel = new MovieModel(movie);
-
             await movieModel
                 .save()
                 .then((response: Response) => {
