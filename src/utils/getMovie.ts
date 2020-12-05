@@ -1,7 +1,8 @@
-const getMovie = async (id: any) => {
-    var axios = require('axios');
+import axios from 'axios';
 
-    var config = {
+const getMovie = async (id: any) => {
+
+    var config: any = {
         method: 'get',
         url: `https://api.themoviedb.org/3/movie/${id}?api_key=b45df506469a79f0765ef4be6522ec07&language=en-US\n`,
         headers: {}

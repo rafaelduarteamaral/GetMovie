@@ -15,3 +15,5 @@ mongoose.connect(
     useFindAndModify: false,
   },
 );
+
+export default mongoose;
