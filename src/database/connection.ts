@@ -1,7 +1,17 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const url = 'mongodb+srv://root:admin@cluster0.fquaa.mongodb.net/todo?retryWrites=true&w=majority';
+import mongoConfig from './config/mongo';
 
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+const mongoUserPass = mongoConfig.username
+  ? `${mongoConfig.username}:${mongoConfig.password}@`
+  : '';
 
-export default mongoose;
+mongoose.connect(
+  `mongodb://${mongoUserPass}${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  },
+);
