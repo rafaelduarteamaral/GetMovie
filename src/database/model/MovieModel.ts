@@ -60,7 +60,8 @@ const MovieSchema = new Schema({
   title: { type: String, required: true },
   video: { type: Boolean, required: true },
   vote_average: { type: Number, required: true },
-  vote_count: { type: Number, required: true }
+  vote_count: { type: Number, required: true },
+  translation: { type: String, required: true }
 })
 
 export default mongoose.model('Movie', MovieSchema);

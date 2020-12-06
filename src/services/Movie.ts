@@ -1,4 +1,6 @@
 import getMovie from "../utils/getMovie";
+import getTranslations from "../utils/getTranslations";
+
 import Service from './Service';
 import MovieModel from '../database/model/MovieModel';
 
@@ -12,10 +14,12 @@ class GetMoviService implements Service<Request, Response> {
 
         try {
             const movie = await JSON.parse(await getMovie(req.params.id));
-            console.log(process.env.MONGO_USER);
-            return res.status(200).json({});
- 
-            const movieModel = new MovieModel(movie);
+            const translation = await JSON.parse(await getTranslations(req.params.id));
+
+            return res.status(200).json({movie, translation})
+
+            const movieModel = new MovieModel({movie, translation});
+            
             await movieModel
                 .save()
                 .then((response: Response) => {
@@ -25,7 +29,7 @@ class GetMoviService implements Service<Request, Response> {
                     return res.status(500).json(error);
                 });
 
-            return res.status(200).json(movie);
+            return res.status(200).json({movie, translation});
 
         } catch (err) {
             return res.status(400).json({
