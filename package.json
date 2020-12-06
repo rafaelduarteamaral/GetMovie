@@ -32,6 +32,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.3",
     "sqlite3": "^5.0.0",
+    "tscpaths": "^0.0.9",
     "tsyringe": "^4.4.0"
   },
   "devDependencies": {
