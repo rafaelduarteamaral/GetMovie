@@ -1,18 +1,17 @@
 import app from './../server';
 import request from "supertest"; // supertest is a framework that allows to easily test web apis
-
 import MongoMock from '../shared/tests/MongoMock';
 
 
 describe("testing-server-routes", () => {
   
-  beforeAll(async () => {
-    await MongoMock.connect();
-  });
+  // beforeAll(async () => {
+  //   await MongoMock.connect();
+  // });
 
-  afterAll(async () => {
-    await MongoMock.disconnect();
-  });
+  // afterAll(async () => {
+  //   await MongoMock.disconnect();
+  // });
 
   it("GET /movie/:id - success", async () => {
     const { body } = await request(app).get("/movie/5"); //uses the request function that calls on express app instance

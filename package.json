@@ -9,10 +9,10 @@
     ]
   },
   "scripts": {
+    "dev": "nodemon src/server.ts",
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "dev:server": "ts-node-dev --inspect --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/server.ts",
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
-    "start:server": "node dist/shared/infra/http/server.js",
-    "start:queue": "node dist/shared/infra/queue/runner.js",
     "lint": "eslint src --ext ts",
     "test": "jest --watch",
     "tsc": "tsc --noEmit"
