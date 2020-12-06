@@ -41,6 +41,7 @@ module.exports = {
     "json",
     "lcov",
   ],
+  
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: null,
@@ -147,7 +148,8 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "<rootDir>/src/**/*.spec.ts",
+    "<rootDir>/src/**/*.test.ts",
+    "<rootDir>/src/**/*.spac.ts",
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped

@@ -46,7 +46,8 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.ts",
+          "**/*.test.ts",
+          "**/*.spac.ts",
           "src/utils/tests/*.ts"
         ]
       }

@@ -14,6 +14,7 @@
     "start:server": "node dist/shared/infra/http/server.js",
     "start:queue": "node dist/shared/infra/queue/runner.js",
     "lint": "eslint src --ext ts",
+    "test": "jest --watch",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
@@ -26,7 +27,10 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb-memory-server": "^6.9.2",
+    "mongodb-memory-server-global-4.0": "^6.7.5",
     "mongoose": "^5.11.4",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.3",
     "sqlite3": "^5.0.0",
     "tsyringe": "^4.4.0"
   },
