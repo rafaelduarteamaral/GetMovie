@@ -1,5 +1,7 @@
 FROM node:12-alpine AS builder
 
+ARG 1
+
 RUN mkdir -p /home/node/build/node_modules && chown -R node:node /home/node/build
 
 WORKDIR /home/node/build
