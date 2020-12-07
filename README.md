@@ -1,12 +1,12 @@
 # GetMovie
 
-Realizar a execução:
+Realizar a execução: <br />
 
 # Terminal
-$ cp .env-example .env              #User & Password definido a partir do .env serão padrão (Docker && Node)
-$ docker-compose up
+$ cp .env-example .env              #User & Password definido a partir do .env serão padrão (Docker && Node) <br />
+$ docker-compose up <br />
 
-# Rota de teste:
-  (GET) localhost:3333/movie/5
-  (GET) localhost:3333/movie/:id
+# Rota de teste: <br />
+  (GET) localhost:3333/movie/5 <br />
+  (GET) localhost:3333/movie/:id <br />
   
